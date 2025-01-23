@@ -1,0 +1,1001 @@
+Product ID,Name,Category,Price,Demand
+1,Skipping Rope,Fitness,254.76,High
+2,Exercise Bike,Fitness,1095.3,Medium
+3,Wallet,Accessories,341.42,Low
+4,Shampoo,Personal Care,1067.4,High
+5,Air Conditioner,Home Appliances,835.56,Low
+6,Watch,Fashion,221.24,Medium
+7,Bed,Furniture,567.65,Low
+8,Smartwatch,Electronics,420.5,Low
+9,Headphones,Electronics,550.55,Medium
+10,Handbag,Fashion,1349.51,High
+11,Dining Table,Furniture,211.04,Low
+12,Sunglasses,Fashion,135.09,High
+13,Exercise Bike,Fitness,1986.7,Medium
+14,Skipping Rope,Fitness,1828.03,Medium
+15,Smartphone,Electronics,528.54,Low
+16,Sofa,Furniture,1486.85,Medium
+17,Tablet,Electronics,1924.41,Medium
+18,Dining Table,Furniture,475.14,Medium
+19,Vacuum Cleaner,Home Appliances,601.57,Low
+20,Jeans,Fashion,1700.17,High
+21,Dumbbells,Fitness,1982.5,Low
+22,Jeans,Fashion,1229.54,High
+23,Yoga Mat,Fitness,749.4,Low
+24,Smartphone,Electronics,111.28,Medium
+25,Tablet,Electronics,1527.6,High
+26,Sneakers,Fashion,1439.05,Low
+27,Handbag,Fashion,1957.68,Medium
+28,Sunglasses,Fashion,1203.89,Low
+29,Bed,Furniture,1256.92,High
+30,Bed,Furniture,1364.49,Medium
+31,Body Lotion,Personal Care,127.19,Medium
+32,Hair Dryer,Personal Care,1448.69,Medium
+33,Bed,Furniture,1546.21,Low
+34,Backpack,Accessories,1709.35,Low
+35,Wallet,Accessories,326.56,Low
+36,Wallet,Accessories,437.41,Low
+37,Bed,Furniture,1085.89,Low
+38,Dumbbells,Fitness,479.15,Low
+39,Skipping Rope,Fitness,925.68,High
+40,Sunglasses,Fashion,1829.51,Medium
+41,Body Lotion,Personal Care,960.13,Medium
+42,Wallet,Accessories,1706.0,High
+43,Power Bank,Accessories,462.66,High
+44,Power Bank,Accessories,1129.2,High
+45,Dining Table,Furniture,1248.7,High
+46,Shampoo,Personal Care,403.65,Low
+47,Headphones,Electronics,151.09,Low
+48,Tablet,Electronics,273.32,High
+49,Sunglasses,Fashion,611.58,High
+50,Wallet,Accessories,794.4,Medium
+51,Perfume,Personal Care,1136.93,High
+52,Power Bank,Accessories,1755.88,Low
+53,Yoga Mat,Fitness,965.69,High
+54,Sofa,Furniture,476.61,High
+55,Desk Lamp,Furniture,785.93,High
+56,Air Conditioner,Home Appliances,188.19,Low
+57,Yoga Mat,Fitness,1640.22,High
+58,Laptop Stand,Accessories,444.62,Medium
+59,Body Lotion,Personal Care,1402.72,Low
+60,Skipping Rope,Fitness,413.04,Low
+61,Smartphone,Electronics,559.99,Low
+62,Bed,Furniture,763.76,High
+63,Chair,Furniture,1400.62,Low
+64,Power Bank,Accessories,1497.88,Medium
+65,Dumbbells,Fitness,1218.87,Low
+66,Exercise Bike,Fitness,894.08,Medium
+67,Chair,Furniture,16.28,High
+68,Sofa,Furniture,1550.29,Medium
+69,Toothbrush,Personal Care,1207.3,Medium
+70,Exercise Bike,Fitness,1197.43,Low
+71,Bed,Furniture,647.84,Low
+72,Handbag,Fashion,976.05,Low
+73,Microwave,Home Appliances,1898.65,Low
+74,Desk Lamp,Furniture,1288.12,Low
+75,Dumbbells,Fitness,1414.84,Medium
+76,Hair Dryer,Personal Care,1608.45,Low
+77,Shampoo,Personal Care,1322.3,High
+78,Vacuum Cleaner,Home Appliances,1825.8,Low
+79,T-Shirt,Fashion,641.3,Low
+80,Sunglasses,Fashion,804.71,Medium
+81,Sofa,Furniture,111.75,Medium
+82,Blender,Home Appliances,277.31,Medium
+83,Blender,Home Appliances,803.0,Medium
+84,Coffee Maker,Home Appliances,1573.69,Low
+85,Backpack,Accessories,1322.85,Low
+86,Belt,Accessories,339.13,Low
+87,Sofa,Furniture,1160.95,High
+88,Backpack,Accessories,1506.39,Low
+89,Hair Dryer,Personal Care,1967.97,Medium
+90,Dining Table,Furniture,85.9,High
+91,Sofa,Furniture,969.48,Low
+92,Bed,Furniture,1918.19,Medium
+93,Jacket,Fashion,1770.14,High
+94,Desk Lamp,Furniture,104.21,Low
+95,Bed,Furniture,254.06,Medium
+96,Skipping Rope,Fitness,684.07,Low
+97,Laptop,Electronics,571.08,High
+98,Power Bank,Accessories,291.19,Medium
+99,Sofa,Furniture,52.56,High
+100,Dining Table,Furniture,613.06,Low
+101,Gaming Console,Electronics,885.95,Medium
+102,Microwave,Home Appliances,717.82,Low
+103,T-Shirt,Fashion,1110.1,Low
+104,Sneakers,Fashion,224.12,Medium
+105,Backpack,Accessories,1626.13,Medium
+106,Coffee Maker,Home Appliances,30.89,High
+107,T-Shirt,Fashion,615.63,Low
+108,Desk Lamp,Furniture,72.39,Medium
+109,Wallet,Accessories,1044.24,Medium
+110,Dumbbells,Fitness,1582.64,High
+111,Air Conditioner,Home Appliances,1919.2,Medium
+112,Desk Lamp,Furniture,116.53,Medium
+113,Chair,Furniture,1345.4,High
+114,Wallet,Accessories,325.39,High
+115,Chair,Furniture,87.9,High
+116,Belt,Accessories,357.82,Medium
+117,Dining Table,Furniture,12.8,Low
+118,Yoga Mat,Fitness,487.33,Low
+119,Skipping Rope,Fitness,1238.28,Low
+120,Backpack,Accessories,530.89,Medium
+121,Dining Table,Furniture,1237.5,Low
+122,Camera,Electronics,1694.02,High
+123,Smartwatch,Electronics,800.96,Low
+124,Skipping Rope,Fitness,80.22,Medium
+125,Backpack,Accessories,527.63,Low
+126,Power Bank,Accessories,1475.84,Low
+127,Desk Lamp,Furniture,1797.14,Low
+128,Body Lotion,Personal Care,1879.3,High
+129,Desk Lamp,Furniture,23.93,High
+130,Microwave,Home Appliances,1923.01,Low
+131,Laptop,Electronics,208.68,High
+132,Wallet,Accessories,1669.44,Medium
+133,Vacuum Cleaner,Home Appliances,861.82,High
+134,Yoga Mat,Fitness,1660.64,Low
+135,Smartwatch,Electronics,1032.52,Low
+136,Bed,Furniture,727.15,Low
+137,Bed,Furniture,617.24,Low
+138,Smartphone,Electronics,700.08,Medium
+139,Watch,Fashion,1021.21,Low
+140,Vacuum Cleaner,Home Appliances,35.48,Medium
+141,Perfume,Personal Care,1061.08,High
+142,Yoga Mat,Fitness,573.37,Medium
+143,Backpack,Accessories,1261.2,Low
+144,T-Shirt,Fashion,1332.96,Medium
+145,Watch,Fashion,580.82,Medium
+146,Wallet,Accessories,301.82,Low
+147,Bed,Furniture,1430.7,Low
+148,Power Bank,Accessories,408.83,Medium
+149,Hair Dryer,Personal Care,1724.56,High
+150,Sneakers,Fashion,745.77,Low
+151,Handbag,Fashion,1109.96,Low
+152,Blender,Home Appliances,248.79,Medium
+153,Treadmill,Fitness,131.08,High
+154,Belt,Accessories,513.97,Medium
+155,Toothbrush,Personal Care,1097.78,Low
+156,Desk Lamp,Furniture,263.88,Medium
+157,Power Bank,Accessories,18.16,Low
+158,Dumbbells,Fitness,147.77,Low
+159,Blender,Home Appliances,1690.24,High
+160,Wallet,Accessories,1915.3,High
+161,Smartphone,Electronics,378.21,Low
+162,Jeans,Fashion,173.93,High
+163,Handbag,Fashion,767.82,Medium
+164,Smartphone,Electronics,449.62,Low
+165,Body Lotion,Personal Care,781.32,High
+166,Microwave,Home Appliances,894.2,Medium
+167,Smartwatch,Electronics,1979.61,Low
+168,Toothbrush,Personal Care,1453.36,High
+169,Blender,Home Appliances,551.48,Low
+170,Bed,Furniture,964.22,High
+171,Jacket,Fashion,1850.3,High
+172,Jeans,Fashion,811.19,Low
+173,Air Conditioner,Home Appliances,412.41,Low
+174,Dining Table,Furniture,752.27,High
+175,Treadmill,Fitness,719.76,Medium
+176,Dining Table,Furniture,1780.09,Low
+177,Hair Dryer,Personal Care,783.49,High
+178,Bed,Furniture,1217.41,High
+179,Perfume,Personal Care,70.62,Low
+180,Smartphone,Electronics,607.66,Low
+181,Bed,Furniture,1515.06,High
+182,Smartwatch,Electronics,546.18,Low
+183,Perfume,Personal Care,437.19,Low
+184,Backpack,Accessories,1532.35,Medium
+185,Exercise Bike,Fitness,421.19,Medium
+186,Bed,Furniture,1774.22,Medium
+187,Jacket,Fashion,1485.52,Medium
+188,Air Conditioner,Home Appliances,1686.24,Medium
+189,Blender,Home Appliances,46.24,Low
+190,Microwave,Home Appliances,1758.38,Medium
+191,Body Lotion,Personal Care,1287.12,Low
+192,Air Conditioner,Home Appliances,1467.21,Medium
+193,Dining Table,Furniture,1570.71,Low
+194,Exercise Bike,Fitness,1085.51,Low
+195,Belt,Accessories,1615.87,Low
+196,Treadmill,Fitness,26.22,High
+197,Shampoo,Personal Care,349.92,High
+198,Laptop,Electronics,1550.91,Low
+199,Power Bank,Accessories,693.92,Low
+200,Wallet,Accessories,544.42,Low
+201,Tablet,Electronics,1408.8,Low
+202,Toothbrush,Personal Care,1001.86,Medium
+203,Perfume,Personal Care,1241.32,Low
+204,Gaming Console,Electronics,221.29,Medium
+205,Air Conditioner,Home Appliances,856.04,Medium
+206,Sofa,Furniture,625.69,High
+207,Gaming Console,Electronics,1045.83,Medium
+208,Backpack,Accessories,474.44,High
+209,Handbag,Fashion,197.5,Medium
+210,Coffee Maker,Home Appliances,749.28,Low
+211,Shampoo,Personal Care,575.0,High
+212,Perfume,Personal Care,115.78,High
+213,Yoga Mat,Fitness,1185.65,Medium
+214,Handbag,Fashion,138.33,Low
+215,Perfume,Personal Care,1656.78,High
+216,Exercise Bike,Fitness,468.1,Medium
+217,Backpack,Accessories,1282.95,Low
+218,Vacuum Cleaner,Home Appliances,1536.19,Medium
+219,Power Bank,Accessories,853.15,High
+220,Dumbbells,Fitness,516.02,Low
+221,Toothbrush,Personal Care,1285.09,Low
+222,Treadmill,Fitness,1402.29,High
+223,Shampoo,Personal Care,577.3,Medium
+224,Sneakers,Fashion,276.2,Medium
+225,Blender,Home Appliances,1948.8,Medium
+226,Headphones,Electronics,1451.7,High
+227,Exercise Bike,Fitness,1469.94,Medium
+228,Blender,Home Appliances,1776.78,High
+229,Smartwatch,Electronics,1889.77,High
+230,Exercise Bike,Fitness,89.68,Medium
+231,Vacuum Cleaner,Home Appliances,390.65,Medium
+232,Vacuum Cleaner,Home Appliances,276.38,High
+233,Sofa,Furniture,279.85,Low
+234,Microwave,Home Appliances,861.52,High
+235,Power Bank,Accessories,845.38,Medium
+236,Wallet,Accessories,1934.76,Low
+237,Smartphone,Electronics,1090.66,Medium
+238,Treadmill,Fitness,1014.18,High
+239,Laptop Stand,Accessories,1399.01,Low
+240,Perfume,Personal Care,1663.65,Medium
+241,Bed,Furniture,1340.07,Medium
+242,Toothbrush,Personal Care,652.91,Medium
+243,Gaming Console,Electronics,316.8,Low
+244,Tablet,Electronics,699.4,Low
+245,Chair,Furniture,839.07,High
+246,Chair,Furniture,652.16,Low
+247,Vacuum Cleaner,Home Appliances,1762.21,Low
+248,Watch,Fashion,1487.72,Low
+249,Camera,Electronics,778.36,Low
+250,Toothbrush,Personal Care,1531.47,High
+251,Body Lotion,Personal Care,349.96,High
+252,Dining Table,Furniture,1029.24,High
+253,Treadmill,Fitness,871.4,Medium
+254,Headphones,Electronics,1547.69,Low
+255,Sneakers,Fashion,665.42,Low
+256,Headphones,Electronics,854.37,Low
+257,Body Lotion,Personal Care,609.86,Low
+258,Hair Dryer,Personal Care,1088.15,Medium
+259,Treadmill,Fitness,1782.5,Low
+260,Jacket,Fashion,240.22,High
+261,Chair,Furniture,583.3,Medium
+262,T-Shirt,Fashion,966.3,High
+263,Headphones,Electronics,11.34,High
+264,Chair,Furniture,739.31,High
+265,Skipping Rope,Fitness,1332.34,Medium
+266,Dumbbells,Fitness,1792.8,Medium
+267,Blender,Home Appliances,1493.97,High
+268,Microwave,Home Appliances,947.42,Medium
+269,Watch,Fashion,622.14,Low
+270,Skipping Rope,Fitness,1354.1,Low
+271,Vacuum Cleaner,Home Appliances,547.58,High
+272,Watch,Fashion,521.05,Low
+273,T-Shirt,Fashion,1556.2,Medium
+274,Perfume,Personal Care,1121.46,Low
+275,T-Shirt,Fashion,454.34,High
+276,Dumbbells,Fitness,701.11,Medium
+277,Headphones,Electronics,1643.71,High
+278,T-Shirt,Fashion,529.26,Low
+279,Camera,Electronics,1627.99,High
+280,Belt,Accessories,283.62,Low
+281,Smartphone,Electronics,1028.58,High
+282,Coffee Maker,Home Appliances,274.25,High
+283,Yoga Mat,Fitness,825.94,Low
+284,Power Bank,Accessories,1334.06,Medium
+285,Perfume,Personal Care,429.32,Low
+286,Smartphone,Electronics,1297.39,High
+287,Yoga Mat,Fitness,1732.16,Medium
+288,Body Lotion,Personal Care,1639.06,High
+289,Treadmill,Fitness,1585.39,Medium
+290,Hair Dryer,Personal Care,1703.61,Medium
+291,T-Shirt,Fashion,162.11,Low
+292,Vacuum Cleaner,Home Appliances,1788.22,Medium
+293,Yoga Mat,Fitness,1655.51,Medium
+294,Blender,Home Appliances,1529.12,High
+295,Jacket,Fashion,1785.04,High
+296,Perfume,Personal Care,811.64,High
+297,Backpack,Accessories,1739.06,Medium
+298,Blender,Home Appliances,1671.27,Medium
+299,Sunglasses,Fashion,1438.68,Medium
+300,Headphones,Electronics,371.67,High
+301,Desk Lamp,Furniture,1826.07,Low
+302,Desk Lamp,Furniture,460.18,Low
+303,Yoga Mat,Fitness,1234.25,Medium
+304,Jacket,Fashion,1184.06,Medium
+305,Desk Lamp,Furniture,897.28,Low
+306,Coffee Maker,Home Appliances,814.33,High
+307,Yoga Mat,Fitness,104.32,Medium
+308,Backpack,Accessories,1283.88,High
+309,Belt,Accessories,790.71,High
+310,Treadmill,Fitness,771.23,Low
+311,Jeans,Fashion,1970.3,High
+312,Sofa,Furniture,1750.48,Medium
+313,Sunglasses,Fashion,550.97,Low
+314,Exercise Bike,Fitness,1846.77,High
+315,Laptop,Electronics,1261.77,Low
+316,Coffee Maker,Home Appliances,514.61,Low
+317,Laptop Stand,Accessories,1830.12,Medium
+318,Yoga Mat,Fitness,122.17,Low
+319,Coffee Maker,Home Appliances,1858.41,Low
+320,Smartwatch,Electronics,49.04,Low
+321,Jacket,Fashion,1361.53,Medium
+322,Perfume,Personal Care,1664.13,High
+323,Body Lotion,Personal Care,115.22,Low
+324,Dumbbells,Fitness,1427.33,Medium
+325,Skipping Rope,Fitness,1310.13,High
+326,Belt,Accessories,1793.14,High
+327,Wallet,Accessories,550.69,High
+328,Camera,Electronics,462.33,High
+329,Dining Table,Furniture,1140.09,High
+330,Toothbrush,Personal Care,1966.15,High
+331,Dumbbells,Fitness,1969.23,High
+332,Microwave,Home Appliances,455.55,High
+333,Sneakers,Fashion,428.49,High
+334,Camera,Electronics,1588.65,High
+335,Dining Table,Furniture,1143.22,High
+336,Coffee Maker,Home Appliances,1240.65,Medium
+337,Microwave,Home Appliances,1227.94,Low
+338,Wallet,Accessories,235.19,Low
+339,Watch,Fashion,1667.29,Low
+340,Tablet,Electronics,1230.12,High
+341,Perfume,Personal Care,25.48,Low
+342,Sunglasses,Fashion,439.67,Low
+343,Vacuum Cleaner,Home Appliances,50.67,Medium
+344,Exercise Bike,Fitness,1092.71,Medium
+345,Microwave,Home Appliances,850.83,Low
+346,Coffee Maker,Home Appliances,242.86,High
+347,Chair,Furniture,1818.05,Medium
+348,Hair Dryer,Personal Care,555.67,Medium
+349,Vacuum Cleaner,Home Appliances,1262.54,Low
+350,Skipping Rope,Fitness,1261.09,Medium
+351,Power Bank,Accessories,818.66,Medium
+352,Microwave,Home Appliances,934.27,Low
+353,Vacuum Cleaner,Home Appliances,591.87,High
+354,Belt,Accessories,101.08,Low
+355,Dining Table,Furniture,1600.8,High
+356,Shampoo,Personal Care,904.95,Medium
+357,Perfume,Personal Care,1441.86,Low
+358,Dumbbells,Fitness,1949.91,Medium
+359,Blender,Home Appliances,641.96,High
+360,Dining Table,Furniture,334.8,High
+361,Yoga Mat,Fitness,1088.91,Medium
+362,Gaming Console,Electronics,728.09,High
+363,Air Conditioner,Home Appliances,433.78,High
+364,Sofa,Furniture,1439.91,Medium
+365,Skipping Rope,Fitness,915.2,Low
+366,Vacuum Cleaner,Home Appliances,1745.12,Medium
+367,Shampoo,Personal Care,948.42,Medium
+368,Sofa,Furniture,1564.17,Low
+369,Skipping Rope,Fitness,491.8,Low
+370,Wallet,Accessories,1714.57,Low
+371,Smartphone,Electronics,260.27,High
+372,Dining Table,Furniture,1209.89,Medium
+373,Backpack,Accessories,313.43,Low
+374,Camera,Electronics,1350.33,Low
+375,Microwave,Home Appliances,1485.59,Medium
+376,Smartwatch,Electronics,1718.76,High
+377,Handbag,Fashion,1451.47,Medium
+378,Power Bank,Accessories,35.73,Medium
+379,Watch,Fashion,858.73,Low
+380,Smartphone,Electronics,1441.73,Low
+381,Smartwatch,Electronics,559.28,High
+382,Bed,Furniture,972.8,Low
+383,Coffee Maker,Home Appliances,1498.89,High
+384,Perfume,Personal Care,1416.76,Low
+385,Yoga Mat,Fitness,90.29,High
+386,Sneakers,Fashion,679.13,Low
+387,Belt,Accessories,1122.54,Low
+388,Shampoo,Personal Care,683.74,Low
+389,Sneakers,Fashion,1609.61,Medium
+390,Blender,Home Appliances,1678.86,Medium
+391,Dumbbells,Fitness,754.24,High
+392,Perfume,Personal Care,22.03,Medium
+393,Watch,Fashion,636.45,High
+394,Perfume,Personal Care,1280.16,Medium
+395,Laptop Stand,Accessories,32.07,High
+396,Shampoo,Personal Care,111.59,Medium
+397,Desk Lamp,Furniture,1273.31,Low
+398,T-Shirt,Fashion,873.09,Medium
+399,Backpack,Accessories,1222.22,Medium
+400,Jeans,Fashion,1938.27,Medium
+401,Smartwatch,Electronics,809.18,Medium
+402,Perfume,Personal Care,476.34,High
+403,Sunglasses,Fashion,215.54,Low
+404,Coffee Maker,Home Appliances,940.34,High
+405,Skipping Rope,Fitness,93.98,Medium
+406,Sofa,Furniture,807.21,Low
+407,Power Bank,Accessories,67.68,Low
+408,Treadmill,Fitness,1020.12,Medium
+409,Belt,Accessories,187.69,Medium
+410,Chair,Furniture,1508.94,Medium
+411,Bed,Furniture,1946.29,Medium
+412,Hair Dryer,Personal Care,1155.05,High
+413,Bed,Furniture,81.88,Medium
+414,Coffee Maker,Home Appliances,1201.72,High
+415,Blender,Home Appliances,203.22,High
+416,Vacuum Cleaner,Home Appliances,1090.14,Low
+417,Treadmill,Fitness,1062.78,Medium
+418,Perfume,Personal Care,844.48,Low
+419,Handbag,Fashion,160.38,Low
+420,Backpack,Accessories,1127.84,Medium
+421,Dining Table,Furniture,1765.5,Low
+422,Tablet,Electronics,613.95,High
+423,Vacuum Cleaner,Home Appliances,1852.76,Medium
+424,Belt,Accessories,1697.72,Medium
+425,Hair Dryer,Personal Care,1901.92,High
+426,Sunglasses,Fashion,1239.38,High
+427,Sofa,Furniture,260.47,Medium
+428,Gaming Console,Electronics,53.69,Medium
+429,Perfume,Personal Care,904.83,Medium
+430,Wallet,Accessories,1711.48,Low
+431,Hair Dryer,Personal Care,402.12,High
+432,Gaming Console,Electronics,463.99,High
+433,Yoga Mat,Fitness,860.17,Medium
+434,Treadmill,Fitness,692.93,Medium
+435,Skipping Rope,Fitness,1034.69,Medium
+436,Smartwatch,Electronics,1124.08,Low
+437,Yoga Mat,Fitness,794.76,High
+438,Tablet,Electronics,465.2,Low
+439,Headphones,Electronics,1815.71,Medium
+440,Hair Dryer,Personal Care,1651.09,Low
+441,Power Bank,Accessories,1991.13,Medium
+442,Gaming Console,Electronics,1052.46,High
+443,Camera,Electronics,283.89,Low
+444,Dining Table,Furniture,1077.69,Medium
+445,Gaming Console,Electronics,105.41,Low
+446,Dining Table,Furniture,848.22,Low
+447,Sofa,Furniture,357.83,High
+448,Shampoo,Personal Care,905.02,High
+449,Headphones,Electronics,584.59,Low
+450,Treadmill,Fitness,233.77,Low
+451,Yoga Mat,Fitness,496.5,High
+452,Vacuum Cleaner,Home Appliances,946.62,Low
+453,Watch,Fashion,1642.74,Low
+454,Chair,Furniture,1931.52,Low
+455,Wallet,Accessories,833.91,Low
+456,Air Conditioner,Home Appliances,722.85,Medium
+457,Headphones,Electronics,1378.89,Low
+458,Power Bank,Accessories,768.69,Medium
+459,Jacket,Fashion,685.51,High
+460,Jeans,Fashion,441.77,High
+461,Chair,Furniture,1005.49,Medium
+462,Desk Lamp,Furniture,997.39,High
+463,Perfume,Personal Care,549.91,Low
+464,Shampoo,Personal Care,1903.05,Low
+465,Hair Dryer,Personal Care,1321.5,High
+466,Exercise Bike,Fitness,1196.17,High
+467,Sneakers,Fashion,316.04,Medium
+468,Laptop,Electronics,620.32,High
+469,Sneakers,Fashion,1018.8,Low
+470,Power Bank,Accessories,481.33,Low
+471,Camera,Electronics,1143.52,Medium
+472,Dining Table,Furniture,203.51,High
+473,T-Shirt,Fashion,759.59,Low
+474,Jeans,Fashion,1503.88,High
+475,Yoga Mat,Fitness,1315.41,High
+476,Sofa,Furniture,1201.14,High
+477,Watch,Fashion,537.12,High
+478,Air Conditioner,Home Appliances,1291.27,High
+479,Laptop,Electronics,1171.56,Medium
+480,Laptop Stand,Accessories,1137.02,High
+481,Tablet,Electronics,1659.97,Low
+482,Treadmill,Fitness,1201.5,Medium
+483,Perfume,Personal Care,1755.39,High
+484,Gaming Console,Electronics,500.85,Low
+485,Headphones,Electronics,451.97,Low
+486,Jeans,Fashion,1317.34,Medium
+487,Backpack,Accessories,725.62,High
+488,Hair Dryer,Personal Care,1759.89,High
+489,Microwave,Home Appliances,1802.66,Low
+490,Shampoo,Personal Care,1016.22,Low
+491,Treadmill,Fitness,1364.51,High
+492,Bed,Furniture,1114.62,Medium
+493,Sofa,Furniture,993.1,High
+494,Camera,Electronics,703.05,Low
+495,Headphones,Electronics,687.69,Medium
+496,Coffee Maker,Home Appliances,1622.86,Medium
+497,Air Conditioner,Home Appliances,740.91,High
+498,Bed,Furniture,781.16,Medium
+499,Laptop Stand,Accessories,861.74,Low
+500,Sofa,Furniture,1911.61,High
+501,Sofa,Furniture,1826.29,Low
+502,Bed,Furniture,733.38,Medium
+503,Hair Dryer,Personal Care,297.31,High
+504,Skipping Rope,Fitness,1373.72,Medium
+505,Coffee Maker,Home Appliances,1891.84,High
+506,Sunglasses,Fashion,336.55,Medium
+507,Sofa,Furniture,1727.37,Medium
+508,Watch,Fashion,268.87,High
+509,Vacuum Cleaner,Home Appliances,1782.15,High
+510,Bed,Furniture,1457.53,Low
+511,Watch,Fashion,41.34,Medium
+512,Air Conditioner,Home Appliances,627.62,High
+513,Dumbbells,Fitness,401.31,Medium
+514,Desk Lamp,Furniture,1301.67,Medium
+515,Jeans,Fashion,638.81,Low
+516,Sunglasses,Fashion,1107.32,Low
+517,Toothbrush,Personal Care,659.2,High
+518,Microwave,Home Appliances,1652.14,Medium
+519,Jeans,Fashion,1089.58,High
+520,Laptop,Electronics,531.52,High
+521,Watch,Fashion,311.76,Medium
+522,Bed,Furniture,988.94,High
+523,T-Shirt,Fashion,1565.43,Low
+524,Jeans,Fashion,638.68,High
+525,Desk Lamp,Furniture,1467.02,Medium
+526,Toothbrush,Personal Care,67.28,High
+527,Dining Table,Furniture,1319.34,High
+528,Sofa,Furniture,620.34,High
+529,Power Bank,Accessories,1261.02,High
+530,Skipping Rope,Fitness,316.97,Medium
+531,Headphones,Electronics,856.42,Low
+532,Chair,Furniture,10.77,High
+533,Laptop Stand,Accessories,111.48,Medium
+534,Body Lotion,Personal Care,1941.8,High
+535,Wallet,Accessories,990.28,Medium
+536,Laptop Stand,Accessories,1779.37,Medium
+537,Camera,Electronics,1171.8,High
+538,Vacuum Cleaner,Home Appliances,723.2,Medium
+539,Body Lotion,Personal Care,825.56,High
+540,Backpack,Accessories,1377.98,Medium
+541,Blender,Home Appliances,1327.83,High
+542,Yoga Mat,Fitness,1114.37,Medium
+543,Vacuum Cleaner,Home Appliances,38.55,Low
+544,Headphones,Electronics,545.73,Low
+545,Smartphone,Electronics,277.94,Low
+546,Body Lotion,Personal Care,1786.1,Low
+547,Vacuum Cleaner,Home Appliances,592.96,Low
+548,Blender,Home Appliances,481.55,High
+549,Smartphone,Electronics,651.58,Low
+550,Yoga Mat,Fitness,450.9,Low
+551,Jacket,Fashion,1934.65,High
+552,Tablet,Electronics,503.56,High
+553,Coffee Maker,Home Appliances,572.92,Medium
+554,Dining Table,Furniture,1900.87,Low
+555,Bed,Furniture,1012.19,High
+556,Watch,Fashion,1991.35,Medium
+557,Dumbbells,Fitness,1875.74,Low
+558,Body Lotion,Personal Care,416.72,Low
+559,Belt,Accessories,1240.44,High
+560,Dining Table,Furniture,1624.41,Medium
+561,Sofa,Furniture,330.78,Medium
+562,Power Bank,Accessories,281.5,Low
+563,Body Lotion,Personal Care,858.92,Medium
+564,Jeans,Fashion,1168.91,Low
+565,Belt,Accessories,807.49,Medium
+566,Perfume,Personal Care,1563.91,Low
+567,Microwave,Home Appliances,1815.37,High
+568,Dining Table,Furniture,1273.99,High
+569,Chair,Furniture,1356.45,Medium
+570,Body Lotion,Personal Care,484.4,High
+571,Headphones,Electronics,1280.67,Medium
+572,Bed,Furniture,758.33,Medium
+573,Blender,Home Appliances,506.9,Medium
+574,Headphones,Electronics,1141.65,Low
+575,Coffee Maker,Home Appliances,1453.95,Low
+576,Microwave,Home Appliances,1247.74,High
+577,Dumbbells,Fitness,677.11,High
+578,Body Lotion,Personal Care,833.73,Low
+579,Perfume,Personal Care,1760.91,Medium
+580,Handbag,Fashion,665.94,Medium
+581,Blender,Home Appliances,683.3,Low
+582,Coffee Maker,Home Appliances,1180.07,Low
+583,Headphones,Electronics,241.81,High
+584,Smartwatch,Electronics,653.33,High
+585,Power Bank,Accessories,1568.64,Medium
+586,Power Bank,Accessories,653.09,High
+587,Bed,Furniture,355.14,Medium
+588,Backpack,Accessories,1452.95,High
+589,Dining Table,Furniture,688.06,Medium
+590,Gaming Console,Electronics,1869.36,High
+591,Desk Lamp,Furniture,1847.23,Low
+592,Sunglasses,Fashion,316.96,Low
+593,Air Conditioner,Home Appliances,619.9,High
+594,Dumbbells,Fitness,566.44,Low
+595,Chair,Furniture,611.98,High
+596,Tablet,Electronics,1463.45,Medium
+597,Hair Dryer,Personal Care,1349.37,Low
+598,Belt,Accessories,1306.9,High
+599,Backpack,Accessories,538.08,High
+600,Microwave,Home Appliances,1969.13,High
+601,Coffee Maker,Home Appliances,879.26,Low
+602,Smartwatch,Electronics,1050.94,Low
+603,Yoga Mat,Fitness,504.61,High
+604,Belt,Accessories,811.76,High
+605,Hair Dryer,Personal Care,1294.54,High
+606,Coffee Maker,Home Appliances,648.12,Medium
+607,Gaming Console,Electronics,1541.61,High
+608,Sofa,Furniture,500.47,Low
+609,Power Bank,Accessories,453.85,High
+610,Desk Lamp,Furniture,255.65,High
+611,Jacket,Fashion,521.26,High
+612,Handbag,Fashion,282.54,Low
+613,Wallet,Accessories,461.1,Medium
+614,Hair Dryer,Personal Care,1182.25,Low
+615,Perfume,Personal Care,32.71,Medium
+616,Smartphone,Electronics,798.48,Medium
+617,Toothbrush,Personal Care,877.0,Low
+618,T-Shirt,Fashion,315.73,Low
+619,Camera,Electronics,1002.71,Medium
+620,Sofa,Furniture,1591.08,High
+621,Jeans,Fashion,817.69,Low
+622,Belt,Accessories,802.15,High
+623,Sneakers,Fashion,11.5,Low
+624,Gaming Console,Electronics,290.45,High
+625,Blender,Home Appliances,900.41,Medium
+626,Blender,Home Appliances,1468.71,High
+627,Belt,Accessories,1084.02,Medium
+628,Exercise Bike,Fitness,1463.51,Low
+629,Body Lotion,Personal Care,1669.41,Medium
+630,Smartphone,Electronics,1745.04,Medium
+631,Blender,Home Appliances,1557.7,Medium
+632,Blender,Home Appliances,1299.96,High
+633,Toothbrush,Personal Care,340.55,High
+634,Exercise Bike,Fitness,1392.58,High
+635,Dumbbells,Fitness,1011.67,High
+636,Skipping Rope,Fitness,85.93,Medium
+637,Yoga Mat,Fitness,654.92,High
+638,Yoga Mat,Fitness,1041.57,Low
+639,Backpack,Accessories,1490.38,High
+640,Desk Lamp,Furniture,1927.46,High
+641,Skipping Rope,Fitness,1261.42,High
+642,Vacuum Cleaner,Home Appliances,1713.74,Low
+643,Microwave,Home Appliances,138.17,High
+644,Hair Dryer,Personal Care,120.33,High
+645,Body Lotion,Personal Care,859.32,Medium
+646,Yoga Mat,Fitness,1233.66,Low
+647,Backpack,Accessories,1917.48,Medium
+648,Jeans,Fashion,1731.95,Low
+649,Yoga Mat,Fitness,1081.4,Low
+650,Sunglasses,Fashion,1827.04,Low
+651,Skipping Rope,Fitness,1182.36,Medium
+652,Exercise Bike,Fitness,960.41,Low
+653,Belt,Accessories,468.88,High
+654,Body Lotion,Personal Care,1640.01,High
+655,Smartphone,Electronics,1485.3,Low
+656,Toothbrush,Personal Care,1727.23,Low
+657,Desk Lamp,Furniture,1883.01,High
+658,Wallet,Accessories,501.83,Low
+659,Body Lotion,Personal Care,113.15,Medium
+660,Treadmill,Fitness,654.02,Medium
+661,Body Lotion,Personal Care,1488.67,High
+662,Watch,Fashion,192.96,High
+663,Dining Table,Furniture,1367.79,Medium
+664,Body Lotion,Personal Care,783.88,Medium
+665,Microwave,Home Appliances,491.03,High
+666,Perfume,Personal Care,297.53,High
+667,Treadmill,Fitness,572.97,Medium
+668,Smartwatch,Electronics,1717.8,High
+669,Watch,Fashion,1990.17,Medium
+670,Power Bank,Accessories,656.89,Low
+671,Dining Table,Furniture,484.4,High
+672,Microwave,Home Appliances,1941.6,Low
+673,Laptop Stand,Accessories,307.73,Medium
+674,Sneakers,Fashion,361.49,High
+675,Perfume,Personal Care,290.42,Medium
+676,Watch,Fashion,469.24,Low
+677,Belt,Accessories,838.8,Low
+678,Tablet,Electronics,1094.38,Medium
+679,Perfume,Personal Care,1324.82,High
+680,Toothbrush,Personal Care,1114.0,High
+681,Chair,Furniture,788.81,Low
+682,Headphones,Electronics,1034.56,Low
+683,Laptop Stand,Accessories,888.02,Medium
+684,Power Bank,Accessories,100.57,Low
+685,Headphones,Electronics,1196.15,Medium
+686,Laptop Stand,Accessories,1173.94,Medium
+687,Camera,Electronics,1680.0,Medium
+688,Backpack,Accessories,1686.03,Low
+689,Coffee Maker,Home Appliances,744.57,High
+690,Yoga Mat,Fitness,1746.98,Medium
+691,Toothbrush,Personal Care,1543.0,Low
+692,Toothbrush,Personal Care,958.43,Low
+693,Smartwatch,Electronics,491.63,Low
+694,Vacuum Cleaner,Home Appliances,102.58,High
+695,Gaming Console,Electronics,1328.12,Low
+696,Laptop,Electronics,186.7,Medium
+697,Gaming Console,Electronics,931.52,Low
+698,Laptop Stand,Accessories,1551.45,High
+699,Dining Table,Furniture,1017.85,Medium
+700,Dumbbells,Fitness,470.66,Low
+701,Hair Dryer,Personal Care,170.94,High
+702,Jacket,Fashion,361.39,Low
+703,Treadmill,Fitness,1398.64,Low
+704,Desk Lamp,Furniture,1737.85,Medium
+705,Chair,Furniture,171.01,Medium
+706,Treadmill,Fitness,539.0,Low
+707,Belt,Accessories,518.63,High
+708,Microwave,Home Appliances,1699.59,High
+709,Bed,Furniture,1566.06,High
+710,Tablet,Electronics,1545.5,Low
+711,Skipping Rope,Fitness,941.74,High
+712,Smartwatch,Electronics,729.91,High
+713,Dining Table,Furniture,831.7,Medium
+714,Skipping Rope,Fitness,1674.3,High
+715,Perfume,Personal Care,1253.72,High
+716,Sunglasses,Fashion,406.54,High
+717,Laptop Stand,Accessories,613.08,High
+718,Headphones,Electronics,828.18,High
+719,Vacuum Cleaner,Home Appliances,702.52,Medium
+720,Gaming Console,Electronics,114.7,High
+721,Dining Table,Furniture,497.25,Low
+722,Hair Dryer,Personal Care,1002.33,High
+723,Shampoo,Personal Care,1426.63,Low
+724,Coffee Maker,Home Appliances,750.56,Medium
+725,T-Shirt,Fashion,382.36,High
+726,Sneakers,Fashion,851.87,High
+727,Microwave,Home Appliances,1512.54,Low
+728,Dining Table,Furniture,1736.31,Medium
+729,Blender,Home Appliances,1362.41,Low
+730,Jeans,Fashion,544.76,High
+731,Body Lotion,Personal Care,392.14,Medium
+732,Camera,Electronics,736.42,Medium
+733,Toothbrush,Personal Care,242.21,High
+734,Shampoo,Personal Care,282.42,Low
+735,Air Conditioner,Home Appliances,1627.83,High
+736,Belt,Accessories,1133.45,Low
+737,Camera,Electronics,1536.07,High
+738,Chair,Furniture,146.14,High
+739,Gaming Console,Electronics,1616.98,High
+740,Power Bank,Accessories,266.07,High
+741,Blender,Home Appliances,801.62,Low
+742,Gaming Console,Electronics,547.99,High
+743,Exercise Bike,Fitness,1333.36,High
+744,Smartwatch,Electronics,1320.76,High
+745,Dining Table,Furniture,527.28,High
+746,Laptop Stand,Accessories,24.5,Medium
+747,Shampoo,Personal Care,1756.17,Low
+748,Hair Dryer,Personal Care,813.06,Low
+749,Treadmill,Fitness,1957.8,Medium
+750,Jacket,Fashion,1460.01,Low
+751,Shampoo,Personal Care,1711.08,Medium
+752,Skipping Rope,Fitness,1440.35,Low
+753,Smartwatch,Electronics,157.57,Medium
+754,Treadmill,Fitness,83.67,Medium
+755,Vacuum Cleaner,Home Appliances,1701.78,Medium
+756,Air Conditioner,Home Appliances,222.81,Medium
+757,Sneakers,Fashion,522.33,Medium
+758,Gaming Console,Electronics,736.0,Low
+759,Headphones,Electronics,1703.56,Medium
+760,Toothbrush,Personal Care,668.24,Low
+761,Body Lotion,Personal Care,1049.87,Medium
+762,Shampoo,Personal Care,743.83,Low
+763,Vacuum Cleaner,Home Appliances,1184.51,Low
+764,Coffee Maker,Home Appliances,1476.33,Low
+765,Watch,Fashion,798.8,Medium
+766,Jacket,Fashion,1070.47,Medium
+767,T-Shirt,Fashion,528.99,High
+768,Sofa,Furniture,1705.61,High
+769,Shampoo,Personal Care,999.4,Medium
+770,Chair,Furniture,838.96,Medium
+771,Headphones,Electronics,924.21,Low
+772,Power Bank,Accessories,287.87,Medium
+773,Sofa,Furniture,1158.6,High
+774,Hair Dryer,Personal Care,840.56,Medium
+775,Laptop Stand,Accessories,430.04,Medium
+776,Tablet,Electronics,1080.37,Low
+777,Bed,Furniture,353.32,High
+778,Jeans,Fashion,1002.3,Medium
+779,Laptop,Electronics,1290.14,Low
+780,Watch,Fashion,1933.92,High
+781,Toothbrush,Personal Care,859.86,Low
+782,Desk Lamp,Furniture,1423.11,High
+783,Tablet,Electronics,895.21,Low
+784,Body Lotion,Personal Care,204.83,Medium
+785,Backpack,Accessories,1742.12,Medium
+786,Dining Table,Furniture,1563.86,Medium
+787,Body Lotion,Personal Care,1601.49,Low
+788,Power Bank,Accessories,1298.58,Medium
+789,Jacket,Fashion,1638.74,Low
+790,Backpack,Accessories,643.14,High
+791,Laptop Stand,Accessories,1621.63,Medium
+792,Skipping Rope,Fitness,1379.65,Low
+793,Bed,Furniture,295.03,Medium
+794,Toothbrush,Personal Care,1191.24,Medium
+795,Microwave,Home Appliances,88.61,High
+796,Dining Table,Furniture,1556.53,Medium
+797,Vacuum Cleaner,Home Appliances,553.79,High
+798,Desk Lamp,Furniture,1800.92,Low
+799,Backpack,Accessories,1968.16,Medium
+800,Jeans,Fashion,1309.87,High
+801,Coffee Maker,Home Appliances,1239.43,Low
+802,Smartphone,Electronics,1665.39,Low
+803,Hair Dryer,Personal Care,991.83,Medium
+804,Skipping Rope,Fitness,374.55,Medium
+805,Wallet,Accessories,293.3,Medium
+806,Desk Lamp,Furniture,1056.57,High
+807,Handbag,Fashion,1789.2,Low
+808,Desk Lamp,Furniture,1627.56,Low
+809,Vacuum Cleaner,Home Appliances,162.36,Low
+810,Camera,Electronics,212.01,Medium
+811,Body Lotion,Personal Care,938.91,Low
+812,Blender,Home Appliances,1082.61,High
+813,Handbag,Fashion,240.3,Low
+814,Sunglasses,Fashion,1119.33,Medium
+815,Air Conditioner,Home Appliances,1951.22,Low
+816,Exercise Bike,Fitness,1523.61,Medium
+817,Vacuum Cleaner,Home Appliances,1838.96,Low
+818,Laptop Stand,Accessories,220.0,Low
+819,Sneakers,Fashion,1544.82,Medium
+820,Treadmill,Fitness,959.61,High
+821,Dining Table,Furniture,1733.85,High
+822,Skipping Rope,Fitness,1821.4,Low
+823,Wallet,Accessories,851.14,Low
+824,Power Bank,Accessories,433.1,Low
+825,Body Lotion,Personal Care,380.24,High
+826,Treadmill,Fitness,192.35,Medium
+827,Smartphone,Electronics,1653.94,Medium
+828,Wallet,Accessories,852.3,Medium
+829,Yoga Mat,Fitness,1287.08,Low
+830,Sunglasses,Fashion,334.61,Medium
+831,Blender,Home Appliances,1639.53,Medium
+832,Shampoo,Personal Care,1703.86,High
+833,Toothbrush,Personal Care,1830.35,Low
+834,Watch,Fashion,1747.24,Medium
+835,Bed,Furniture,1106.35,Low
+836,Bed,Furniture,521.78,High
+837,Treadmill,Fitness,829.02,Medium
+838,Body Lotion,Personal Care,1317.43,Medium
+839,T-Shirt,Fashion,1048.56,Low
+840,Dining Table,Furniture,842.59,Medium
+841,Air Conditioner,Home Appliances,1734.6,Medium
+842,Wallet,Accessories,805.75,Low
+843,Toothbrush,Personal Care,691.21,Medium
+844,Yoga Mat,Fitness,625.69,Medium
+845,Treadmill,Fitness,541.64,Medium
+846,Bed,Furniture,196.39,Low
+847,Skipping Rope,Fitness,1237.09,Medium
+848,Toothbrush,Personal Care,863.36,High
+849,Perfume,Personal Care,1044.08,Medium
+850,Belt,Accessories,1305.93,Low
+851,Backpack,Accessories,1641.29,High
+852,Shampoo,Personal Care,271.7,High
+853,Tablet,Electronics,305.45,High
+854,Perfume,Personal Care,1800.65,Low
+855,Dumbbells,Fitness,1782.12,Medium
+856,Chair,Furniture,861.63,High
+857,Air Conditioner,Home Appliances,734.38,High
+858,Exercise Bike,Fitness,1024.19,Medium
+859,Handbag,Fashion,424.14,High
+860,Toothbrush,Personal Care,270.51,High
+861,Dining Table,Furniture,333.77,Medium
+862,Handbag,Fashion,455.68,Low
+863,Coffee Maker,Home Appliances,146.05,High
+864,Desk Lamp,Furniture,1877.53,Medium
+865,Sofa,Furniture,843.92,High
+866,Dining Table,Furniture,1506.3,High
+867,Power Bank,Accessories,966.74,Low
+868,Treadmill,Fitness,310.37,Medium
+869,Laptop,Electronics,459.92,Low
+870,Toothbrush,Personal Care,471.59,High
+871,Skipping Rope,Fitness,816.68,High
+872,Blender,Home Appliances,482.56,Low
+873,Gaming Console,Electronics,850.06,Low
+874,Power Bank,Accessories,1772.31,High
+875,Belt,Accessories,818.89,Medium
+876,Sofa,Furniture,270.32,High
+877,Chair,Furniture,574.28,Low
+878,Hair Dryer,Personal Care,1062.94,Medium
+879,Backpack,Accessories,1009.87,Low
+880,Sofa,Furniture,1269.73,High
+881,Hair Dryer,Personal Care,1950.25,Medium
+882,Toothbrush,Personal Care,552.76,Medium
+883,Jacket,Fashion,704.78,Medium
+884,Exercise Bike,Fitness,1662.45,Medium
+885,Shampoo,Personal Care,1573.41,High
+886,Camera,Electronics,516.57,Medium
+887,Bed,Furniture,1856.25,Low
+888,Coffee Maker,Home Appliances,1722.73,Medium
+889,Bed,Furniture,1866.11,Medium
+890,Handbag,Fashion,546.06,Low
+891,Desk Lamp,Furniture,972.12,High
+892,Belt,Accessories,152.52,High
+893,Watch,Fashion,544.08,Medium
+894,Vacuum Cleaner,Home Appliances,762.66,Low
+895,Wallet,Accessories,730.8,Medium
+896,Hair Dryer,Personal Care,273.37,Medium
+897,Air Conditioner,Home Appliances,1303.21,High
+898,Smartphone,Electronics,1781.9,Medium
+899,Treadmill,Fitness,1511.1,Low
+900,Treadmill,Fitness,641.38,Medium
+901,Laptop Stand,Accessories,708.18,High
+902,Jeans,Fashion,1194.54,Medium
+903,Perfume,Personal Care,684.58,High
+904,Power Bank,Accessories,144.57,High
+905,Blender,Home Appliances,1943.12,High
+906,Laptop Stand,Accessories,1245.48,High
+907,Dining Table,Furniture,64.36,Medium
+908,Microwave,Home Appliances,1140.51,Low
+909,Wallet,Accessories,472.91,High
+910,Laptop Stand,Accessories,1383.3,Medium
+911,Microwave,Home Appliances,953.96,High
+912,Microwave,Home Appliances,1789.27,High
+913,Air Conditioner,Home Appliances,1911.99,Low
+914,Tablet,Electronics,1911.39,High
+915,Laptop,Electronics,1069.5,Low
+916,Tablet,Electronics,1926.39,High
+917,Treadmill,Fitness,1182.07,Low
+918,Body Lotion,Personal Care,587.01,High
+919,T-Shirt,Fashion,1492.7,Low
+920,Dining Table,Furniture,534.56,High
+921,Headphones,Electronics,1949.76,Medium
+922,Laptop,Electronics,148.57,Low
+923,Belt,Accessories,1984.03,Medium
+924,Treadmill,Fitness,1089.0,Low
+925,Bed,Furniture,102.23,Medium
+926,Exercise Bike,Fitness,1954.43,Medium
+927,Blender,Home Appliances,735.79,High
+928,Backpack,Accessories,1846.0,High
+929,Smartphone,Electronics,1461.6,Medium
+930,Skipping Rope,Fitness,1306.32,High
+931,Sofa,Furniture,194.83,Medium
+932,Perfume,Personal Care,796.08,Low
+933,Coffee Maker,Home Appliances,1434.36,High
+934,Sunglasses,Fashion,1674.84,Medium
+935,Jeans,Fashion,1864.87,Low
+936,Air Conditioner,Home Appliances,1487.41,Medium
+937,Body Lotion,Personal Care,1981.26,High
+938,Treadmill,Fitness,53.1,Medium
+939,Laptop Stand,Accessories,1014.67,High
+940,Air Conditioner,Home Appliances,1499.86,Medium
+941,Sofa,Furniture,1998.74,High
+942,Tablet,Electronics,420.07,Medium
+943,Smartphone,Electronics,1574.32,Medium
+944,Chair,Furniture,1280.81,Low
+945,Shampoo,Personal Care,1388.39,Medium
+946,Laptop Stand,Accessories,1954.86,High
+947,Desk Lamp,Furniture,912.2,High
+948,Bed,Furniture,1125.34,Low
+949,Body Lotion,Personal Care,1740.85,High
+950,Laptop,Electronics,1585.92,Medium
+951,Microwave,Home Appliances,1465.48,High
+952,Skipping Rope,Fitness,1767.56,Low
+953,Dining Table,Furniture,629.7,Medium
+954,Sneakers,Fashion,269.69,Medium
+955,Laptop Stand,Accessories,173.64,Low
+956,Sunglasses,Fashion,1651.03,Medium
+957,Microwave,Home Appliances,876.18,Medium
+958,Smartwatch,Electronics,1802.29,Low
+959,Sofa,Furniture,1001.96,Medium
+960,Chair,Furniture,1459.27,High
+961,Smartwatch,Electronics,1090.68,High
+962,Chair,Furniture,1703.88,Medium
+963,Headphones,Electronics,1195.88,Medium
+964,Treadmill,Fitness,1623.48,Low
+965,Sofa,Furniture,1885.96,Low
+966,Treadmill,Fitness,674.69,Low
+967,Coffee Maker,Home Appliances,1586.38,Low
+968,Power Bank,Accessories,339.03,Low
+969,Coffee Maker,Home Appliances,1440.67,Medium
+970,Air Conditioner,Home Appliances,575.52,Medium
+971,Hair Dryer,Personal Care,1153.41,Medium
+972,Smartwatch,Electronics,839.09,Medium
+973,Skipping Rope,Fitness,1424.92,Low
+974,T-Shirt,Fashion,1875.64,Low
+975,Power Bank,Accessories,1591.91,High
+976,Headphones,Electronics,537.75,Low
+977,Hair Dryer,Personal Care,1707.73,Low
+978,Smartwatch,Electronics,1038.18,Medium
+979,Camera,Electronics,1659.12,High
+980,Dining Table,Furniture,695.25,Medium
+981,Power Bank,Accessories,1347.67,Low
+982,Tablet,Electronics,549.91,High
+983,Jeans,Fashion,141.86,Low
+984,Tablet,Electronics,205.51,High
+985,Sunglasses,Fashion,1435.9,High
+986,Laptop,Electronics,46.67,High
+987,Wallet,Accessories,1648.84,High
+988,Backpack,Accessories,1966.61,Medium
+989,Perfume,Personal Care,1982.96,Low
+990,Watch,Fashion,112.98,Low
+991,Exercise Bike,Fitness,297.92,Low
+992,Gaming Console,Electronics,1088.7,Low
+993,Wallet,Accessories,1708.42,High
+994,Camera,Electronics,163.53,Low
+995,T-Shirt,Fashion,1545.26,High
+996,Sofa,Furniture,505.36,High
+997,Dumbbells,Fitness,1765.4,Medium
+998,Yoga Mat,Fitness,1558.6,Medium
+999,Sofa,Furniture,1034.91,Medium
+1000,Dumbbells,Fitness,361.85,Low
