@@ -1,203 +1,218 @@
 import os
-import pandas as pd
-import numpy as np
+from dotenv import load_dotenv
+import folium
+from streamlit_folium import folium_static
 import streamlit as st
-import xgboost as xgb
-import lightgbm as lgb
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from geopy.distance import geodesic
+import requests
+import json
+import geopy.distance
 
-class AIDeliveryOptimizationSystem:
+# Load environment variables from .env file
+load_dotenv()
+
+class DeliveryMappingSystem:
     def __init__(self):
-        # Load and prepare datasets
-        try:
-            self.delivery_data = pd.read_csv("synthetic_delivery_data.csv")
-            
-            # Calculate additional features
-            self.calculate_additional_features()
-            
-            st.write("Available columns:", list(self.delivery_data.columns))
-        except Exception as e:
-            st.error(f"Error loading delivery data: {e}")
-            self.delivery_data = pd.DataFrame()
-        
-        # Initialize models
-        self.route_optimization_model = None
-        self.demand_forecasting_model = None
-        
-        # Preprocessing attributes
-        self.route_scaler = StandardScaler()
-
-    def calculate_additional_features(self):
-        """Calculate distance and duration features"""
-        # Calculate distance between origin and destination
-        self.delivery_data['distance'] = self.delivery_data.apply(
-            lambda row: geodesic(
-                (row['origin_lat'], row['origin_lon']), 
-                (row['dest_lat'], row['dest_lon'])
-            ).kilometers, 
-            axis=1
-        )
-        
-        # Convert weather conditions to numeric
-        weather_mapping = {
-            'Sunny': 1, 
-            'Cloudy': 2, 
-            'Rainy': 3, 
-            'Snowy': 4, 
-            'Windy': 5
-        }
-        self.delivery_data['weather_code'] = self.delivery_data['weather_condition'].map(
-            weather_mapping
-        ).fillna(0)
-        
-        # Convert timestamp to duration (assuming it represents time taken)
-        self.delivery_data['delivery_timestamp'] = pd.to_datetime(
-            self.delivery_data['delivery_timestamp']
-        )
-        
-        # Estimated temperature (since not in original dataset)
-        temp_mapping = {
-            'Sunny': 25, 
-            'Cloudy': 20, 
-            'Rainy': 15, 
-            'Snowy': 0, 
-            'Windy': 18
-        }
-        self.delivery_data['temperature'] = self.delivery_data['weather_condition'].map(
-            temp_mapping
-        ).fillna(20)
-
-    def preprocess_route_data(self):
-        """Prepare data for route optimization"""
-        # Select specific features
-        route_features = [
-            'distance', 'weather_code', 'temperature', 
-            'origin_lat', 'origin_lon', 'dest_lat', 'dest_lon'
-        ]
-        
-        # Select and clean route data
-        route_df = self.delivery_data[route_features].dropna()
-        
-        # If not enough data, use all available data
-        if len(route_df) < 10:
-            st.warning("Insufficient data. Using all available data.")
-        
-        # Scale features
-        X_scaled = self.route_scaler.fit_transform(route_df)
-        
-        return X_scaled, route_df
-
-    def train_route_optimization_model(self):
-        """Train a machine learning model for route optimization"""
-        # Preprocess route data
-        X_scaled, route_df = self.preprocess_route_data()
-        
-        # Use actual delivery time as target
-        y = self.delivery_data['actual_delivery_time']
-        
-        # Split the data
-        X_train, X_test, y_train, y_test = train_test_split(
-            X_scaled, y, test_size=0.2, random_state=42
-        )
-        
-        # Train Random Forest Regressor
-        self.route_optimization_model = RandomForestRegressor(
-            n_estimators=100, 
-            random_state=42
-        )
-        self.route_optimization_model.fit(X_train, y_train)
-        
-        return self.route_optimization_model
-
-    def optimize_delivery_route(self, input_route_features):
         """
-        Optimize a specific delivery route
+        Initialize Delivery Mapping System using .env for API key
+        """
+        # Retrieve API key from environment variables
+        self.api_key = os.getenv('OPENROUTESERVICE_API_KEY')
+        
+        # Set default configuration
+        self.routing_api_url = "https://api.openrouteservice.org/v2/directions/driving-car"
+        self.geocoding_api_url = "https://api.openrouteservice.org/geocode/search"
+        
+        # Validate API key
+        if not self.api_key:
+            st.warning("OpenRouteService API key not found in .env file. Some functionalities may be limited.")
+
+    def geocode_address(self, address):
+        """
+        Convert address to latitude and longitude
         
         Args:
-        input_route_features (dict): Dictionary with route features
+            address (str): Address to geocode
         
         Returns:
-        dict: Optimized route recommendations
+            tuple: (longitude, latitude) or None if geocoding fails
         """
-        # Ensure model is trained
-        if self.route_optimization_model is None:
-            self.train_route_optimization_model()
+        if not self.api_key:
+            st.error("Geocoding requires an API key")
+            return None
         
-        # Prepare input features
-        features_df = pd.DataFrame([input_route_features])
+        try:
+            params = {
+                'api_key': self.api_key,
+                'text': address,
+                'size': 1  # Get top result
+            }
+            response = requests.get(self.geocoding_api_url, params=params)
+            
+            data = response.json()
+            
+            if data.get('features'):
+                coordinates = data['features'][0]['geometry']['coordinates']
+                return coordinates  # [lon, lat]
+            else:
+                st.error(f"No geocoding results for address: {address}")
+        except Exception as e:
+            st.error(f"Geocoding error: {e}")
         
-        # Scale input features
-        scaled_features = self.route_scaler.transform(features_df)
+        return None
+
+    def calculate_route(self, start_coords, end_coords):
+        """
+        Calculate route between two coordinates
         
-        # Predict optimal route duration
-        predicted_duration = self.route_optimization_model.predict(scaled_features)[0]
+        Args:
+            start_coords (tuple): (longitude, latitude) of start point
+            end_coords (tuple): (longitude, latitude) of end point
         
-        # Feature importance 
-        feature_importance = pd.DataFrame({
-            'feature': [
-                'distance', 'weather_code', 'temperature', 
-                'origin_lat', 'origin_lon', 'dest_lat', 'dest_lon'
-            ],
-            'importance': self.route_optimization_model.feature_importances_
-        }).sort_values('importance', ascending=False)
+        Returns:
+            dict: Route information including distance, duration, route geometry
+        """
+        if not self.api_key:
+            st.error("Routing requires an API key")
+            return None
         
-        return {
-            'predicted_duration': predicted_duration,
-            'feature_importance': feature_importance
-        }
+        try:
+            payload = {
+                "coordinates": [start_coords, end_coords]
+            }
+            headers = {
+                'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8',
+                'Authorization': self.api_key,
+                'Content-Type': 'application/json; charset=utf-8'
+            }
+            
+            # Make the API request
+            response = requests.post(self.routing_api_url, json=payload, headers=headers)
+            
+            # Parse the response
+            route_data = response.json()
+            
+            # Check for errors
+            if 'error' in route_data:
+                st.error(f"Routing API Error: {route_data['error']['message']}")
+                return None
+            
+            # Extract key route information
+            first_feature = route_data['features'][0]
+            
+            # Safely extract route details
+            summary = first_feature['properties']['summary']
+            distance = summary['distance'] / 1000  # km
+            duration = summary['duration'] / 60  # minutes
+            
+            route_geometry = first_feature['geometry']['coordinates']
+            
+            return {
+                'distance': distance,
+                'duration': duration,
+                'route_geometry': route_geometry
+            }
+        except requests.RequestException as req_err:
+            st.error(f"Request error: {req_err}")
+        except ValueError as val_err:
+            st.error(f"Value error: {val_err}")
+        except Exception as e:
+            st.error(f"Unexpected routing error: {e}")
+        
+        return None
+
+    def create_delivery_route_map(self, start_coords, end_coords, route_geometry=None):
+        """
+        Create interactive map showing delivery route
+        
+        Args:
+            start_coords (tuple): (longitude, latitude) of start point
+            end_coords (tuple): (longitude, latitude) of end point
+            route_geometry (list, optional): Detailed route coordinates
+        
+        Returns:
+            folium.Map: Interactive map object
+        """
+        # Determine map center
+        center_lat = (start_coords[1] + end_coords[1]) / 2
+        center_lon = (start_coords[0] + end_coords[0]) / 2
+        
+        # Create base map
+        delivery_map = folium.Map(
+            location=[center_lat, center_lon], 
+            zoom_start=10
+        )
+        
+        # Add start marker
+        folium.Marker(
+            [start_coords[1], start_coords[0]], 
+            popup='Start Location',
+            icon=folium.Icon(color='green', icon='play')
+        ).add_to(delivery_map)
+        
+        # Add end marker
+        folium.Marker(
+            [end_coords[1], end_coords[0]], 
+            popup='Destination',
+            icon=folium.Icon(color='red', icon='flag')
+        ).add_to(delivery_map)
+        
+        # Draw route if geometry provided
+        if route_geometry:
+            # Convert coordinates for folium (lat, lon)
+            route_points = [(point[1], point[0]) for point in route_geometry]
+            
+            # Add route polyline
+            folium.PolyLine(
+                route_points, 
+                color='blue', 
+                weight=5, 
+                opacity=0.8
+            ).add_to(delivery_map)
+        
+        return delivery_map
 
 def main():
-    st.title("AI-Powered Delivery Optimization System")
+    st.title("🗺️ Delivery Route Visualization")
     
-    # Initialize the optimization system
-    system = AIDeliveryOptimizationSystem()
+    # Initialize mapping system
+    mapping_system = DeliveryMappingSystem()
     
-    # Sidebar for system controls
-    st.sidebar.header("AI Optimization Tools")
-    
-    # Route Optimization Section
-    st.header("🚚 AI Route Optimization")
-    
-    # Input fields for route features
+    # Input sections
     col1, col2 = st.columns(2)
+    
     with col1:
-        origin_lat = st.number_input("Origin Latitude", min_value=-90.0, max_value=90.0, value=40.7128, step=0.0001)
-        origin_lon = st.number_input("Origin Longitude", min_value=-180.0, max_value=180.0, value=-74.0060, step=0.0001)
-        weather_code = st.selectbox("Weather Condition", [1, 2, 3, 4, 5], 
-                                    format_func=lambda x: {1: 'Sunny', 2: 'Cloudy', 3: 'Rainy', 4: 'Snowy', 5: 'Windy'}[x])
+        start_address = st.text_input("Enter Start Address", placeholder="123 Main St, New York, NY 10001, USA")
     
     with col2:
-        dest_lat = st.number_input("Destination Latitude", min_value=-90.0, max_value=90.0, value=40.7282, step=0.0001)
-        dest_lon = st.number_input("Destination Longitude", min_value=-180.0, max_value=180.0, value=-73.7949, step=0.0001)
-        temperature = st.number_input("Temperature (°C)", min_value=-50.0, max_value=50.0, value=20.0)
+        end_address = st.text_input("Enter Destination Address", placeholder="456 Broadway, New York, NY 10013, USA")
     
-    # Calculate distance
-    from geopy.distance import geodesic
-    distance = geodesic((origin_lat, origin_lon), (dest_lat, dest_lon)).kilometers
-    
-    route_features = {
-        'distance': distance,
-        'weather_code': weather_code,
-        'temperature': temperature,
-        'origin_lat': origin_lat,
-        'origin_lon': origin_lon,
-        'dest_lat': dest_lat,
-        'dest_lon': dest_lon
-    }
-    
-    if st.button("Optimize Route"):
-        route_optimization = system.optimize_delivery_route(route_features)
+    if st.button("Generate Route"):
+        # Geocode addresses
+        start_coords = mapping_system.geocode_address(start_address)
+        end_coords = mapping_system.geocode_address(end_address)
         
-        st.subheader("Route Optimization Results")
-        st.write(f"Predicted Delivery Duration: {route_optimization['predicted_duration']:.2f} minutes")
-        
-        st.subheader("Route Optimization Feature Importance")
-        st.dataframe(route_optimization['feature_importance'])
+        if start_coords and end_coords:
+            # Calculate route
+            route_info = mapping_system.calculate_route(start_coords, end_coords)
+            
+            if route_info:
+                # Display route details
+                st.subheader("Route Details")
+                st.write(f"Distance: {route_info['distance']:.2f} km")
+                st.write(f"Estimated Duration: {route_info['duration']:.2f} minutes")
+                
+                # Create and display map
+                delivery_map = mapping_system.create_delivery_route_map(
+                    start_coords, 
+                    end_coords, 
+                    route_info['route_geometry']
+                )
+                
+                folium_static(delivery_map)
+            else:
+                st.error("Failed to calculate route. Please check your addresses and API configuration.")
+        else:
+            st.error("Unable to geocode one or both addresses. Please check the addresses.")
 
 if __name__ == "__main__":
     main()

@@ -5,3 +5,10 @@ scikit-learn
 xgboost
 catboost
 scipy
+python-dotenv
+streamlit
+folium
+streamlit-folium
+python-dotenv
+requests
+geopy
