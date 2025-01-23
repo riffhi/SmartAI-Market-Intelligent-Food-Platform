@@ -2,5 +2,9 @@ pandas
 numpy
 lightgbm
 scikit-learn
-xgboost
 catboost
+fastapi
+xgboost
+scipy
+nltk
+transformers
