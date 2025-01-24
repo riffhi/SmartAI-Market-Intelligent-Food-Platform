@@ -144,6 +144,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - Advanced anomaly detection in food service operations
 
 ## 📞 Contact
-Riddhi Bhanushali - youremail@example.com
+Riddhi Bhanushali - bhanushaliriddhi2205@gmail.com
 
 Project Link: [https://github.com/riffhi/rubix-25_36_kaizen](https://github.com/riffhi/rubix-25_36_kaizen)
