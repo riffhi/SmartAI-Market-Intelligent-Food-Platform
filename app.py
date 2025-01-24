@@ -19,76 +19,84 @@ def apply_custom_styles():
     """Apply custom CSS styling to improve UI"""
     st.markdown("""
     <style>
-    .main {
-    background-color: #F0F2F6;
-}
-.stApp {
-    max-width: 100%;
-    margin: 0 auto;
-}
-.stHeader {
-    color: #2C3E50;
-    font-weight: bold;
-}
-.stButton>button {
-    background-color: #3498DB;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease;
-}
-.stButton>button:hover {
-    background-color: #2980B9;
-}
-.stSidebar .stRadio {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-    </style>
+    body {
+        background-color: #FDF6E3;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .stApp {
+        max-width: 85%;
+        margin: 0 auto;
+        background-color: #FFFAF0;
+        border-radius: 15px;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+    .stButton>button {
+        background-color: #FF6F61;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .stButton>button:hover {
+        background-color: #FF4040;
+    }
+    .stSidebar {
+        background-color: #FFDAC1;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .stSidebar .stRadio {
+        background-color: #FFF7E6;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+        color: #FF4500;
+    }
     """, unsafe_allow_html=True)
 
 def main():
     apply_custom_styles()
-    
-    
-    st.title("🍽️ SmartAI Market: Intelligent Food Platform")
+
+    st.title("🎉 SmartAI Market: Your Playful Food Platform")
     st.markdown("""
-    ### Your AI-Powered Food Service Optimization Platform
-    Leveraging advanced machine learning to enhance food delivery, waste reduction, and pricing strategies.
+    ### 🌟 Welcome to Your AI-Powered Food Service Optimization Platform
+    Let's make food delivery fun, efficient, and sustainable with the power of AI! Explore features below. 🍕🚀
     """)
-    
+
     # Initialize AI platform
     food_ai = FoodPlatformAI()
-    
-    # Enhanced sidebar with card-like design
-    st.sidebar.title("🤖 AI Features")
-    st.sidebar.markdown("Select an intelligent feature to explore:")
 
-     # Feature selection sidebar
-    feature = st.sidebar.radio("Select AI Feature", [
-        "Route Optimization & Delivery Time Prediction",
-        "Vendor Matching", 
-        "Sentiment Analysis",
-        "Waste Reduction",
-        "Demand Forecasting",
-        "Price Optimization"
+    # Sidebar
+    st.sidebar.title("🎯 AI Features")
+    st.sidebar.markdown("Select a feature to play with:")
+
+    feature = st.sidebar.radio("Pick a Feature:", [
+        "🌍 Route Optimization",
+        "🤝 Vendor Matching",
+        "💬 Sentiment Analysis",
+        "♻️ Waste Reduction",
+        "📈 Demand Forecasting",
+        "💰 Price Optimization"
     ])
-    
-    # Render selected feature's page
-    if feature == "Route Optimization & Delivery Time Prediction":
+
+    # Route to the corresponding feature page
+    if feature == "🌍 Route Optimization":
         route_optimization_page(food_ai)
-    elif feature == "Vendor Matching":
+    elif feature == "🤝 Vendor Matching":
         vendor_matching_page(food_ai.vendors_df, food_ai.customers_df)
-    elif feature == "Sentiment Analysis":
+    elif feature == "💬 Sentiment Analysis":
         sentiment_analysis_page(food_ai)
-    elif feature == "Waste Reduction":
+    elif feature == "♻️ Waste Reduction":
         waste_reduction_page(food_ai)
-    elif feature == "Demand Forecasting":
+    elif feature == "📈 Demand Forecasting":
         demand_forecasting_page(food_ai)
-    elif feature == "Price Optimization":
+    elif feature == "💰 Price Optimization":
         price_optimization_page(food_ai)
 
 class FoodPlatformAI:
