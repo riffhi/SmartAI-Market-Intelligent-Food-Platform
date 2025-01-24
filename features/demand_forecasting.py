@@ -1,128 +1,76 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sb
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn import metrics
-from sklearn.svm import SVC
-from xgboost import XGBRegressor
+from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression, Lasso, Ridge
-from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error as mae
 
-import warnings
-warnings.filterwarnings('ignore')
+def analyze_demand(item=None):
+    # Load data
+    df = pd.read_csv('sales_dataset.csv')
 
-df = pd.read_csv('train.csv')
-
-
-parts = df["date"].str.split("-", n = 3, expand = True)
-df["year"]= parts[0].astype('int')
-df["month"]= parts[1].astype('int')
-df["day"]= parts[2].astype('int')
-df.head()
-
-from datetime import datetime
-import calendar
+    # Preprocess date
+    df['date'] = pd.to_datetime(df['date'])
     
-def weekend_or_weekday(year,month,day):
-    
-    d = datetime(year,month,day)
-    if d.weekday()>4:
-        return 1
-    else:
-        return 0
+    # Filter data if specific item is provided
+    if item:
+        df = df[df['item'] == item]
+        
+        # If no data for the item, return error
+        if len(df) == 0:
+            return {"error": f"No data found for item: {item}"}
 
-df['weekend'] = df.apply(lambda x:weekend_or_weekday(x['year'], x['month'], x['day']), axis=1)
+    # Feature engineering
+    df['weekday'] = df['date'].dt.dayofweek
+    df['weekend'] = df['weekday'].apply(lambda x: 1 if x >= 5 else 0)
+    df['month'] = df['date'].dt.month
+    df['year'] = df['date'].dt.year
 
-from datetime import date
-import holidays
+    # Prepare features
+    features = ['weekend', 'month', 'year', 'holiday', 'promotion']
+    X = df[features]
+    y = df['sales']
 
-df['m1'] = np.sin(df['month'] * (2 * np.pi / 12))
-df['m2'] = np.cos(df['month'] * (2 * np.pi / 12))
+    # Ensure enough samples
+    if len(X) < 10:
+        return {"error": "Insufficient data for analysis"}
 
-from datetime import datetime
+    # Split data
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-def which_day(year, month, day): 
-    
-    d = datetime(year,month,day) 
-    return d.weekday() 
+    # Scale features
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
 
-df['weekday'] = df.apply(lambda x: which_day(x['year'], 
-                                                    x['month'], 
-                                                    x['day']), 
-                                axis=1) 
+    # Train XGBoost model (best for prediction)
+    model = XGBRegressor(random_state=42)
+    model.fit(X_train_scaled, y_train)
 
-df.drop('date', axis=1, inplace=True)
+    # Predict next week's demand
+    # Create a sample input for prediction (you might want to customize this)
+    next_week_input = pd.DataFrame({
+        'weekend': [1],  # Assuming a weekend
+        'month': [df['month'].mode().values[0]],  # Most common month
+        'year': [df['year'].max()],  # Latest year
+        'holiday': [0],  # No holiday
+        'promotion': [1]  # With promotion
+    })
 
-df['store'].nunique(), df['item'].nunique()
+    # Scale input
+    next_week_input_scaled = scaler.transform(next_week_input)
 
-df['weekend'] = df['weekday'].apply(lambda x: 1 if x >= 5 else 0)
-features = ['store', 'year', 'month', 'weekday', 'weekend']
+    # Predict demand
+    predicted_demand = model.predict(next_week_input_scaled)[0]
 
-plt.subplots(figsize=(20, 10))
-for i, col in enumerate(features):
-    plt.subplot(2, 3, i + 1)
-    df.groupby(col).mean()['sales'].plot.bar()
-plt.show()
+    return {
+        'Predicted_Demand': int(predicted_demand),
+        'Prediction_Details': {
+            'Current_Average_Sales': df['sales'].mean(),
+            
+        }
+    }
 
-plt.figure(figsize=(10,5))
-df.groupby('day').mean()['sales'].plot()
-plt.show()
-
-plt.figure(figsize=(15, 10))
-
-window_size = 30
-data = df[df['year']==2013]
-windows = data['sales'].rolling(window_size)
-sma = windows.mean()
-sma = sma[window_size - 1:]
-
-data['sales'].plot()
-sma.plot()
-plt.legend()
-plt.show()
-
-plt.subplots(figsize=(12, 5))
-plt.subplot(1, 2, 1)
-sb.distplot(df['sales'])
-
-plt.subplot(1, 2, 2)
-sb.boxplot(df['sales'])
-plt.show()
-
-plt.figure(figsize=(10, 10))
-sb.heatmap(df.corr() > 0.8,
-           annot=True,
-           cbar=False)
-plt.show()
-
-df = df[df['sales']<140]
-
-features = df.drop(['sales', 'year'], axis=1)
-target = df['sales'].values
-
-
-X_train, X_val, Y_train, Y_val = train_test_split(features, target,
-                                                  test_size = 0.05,
-                                                  random_state=22)
-X_train.shape, X_val.shape
-
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_val = scaler.transform(X_val)
-
-models = [LinearRegression(), XGBRegressor(), Lasso(), Ridge()]
-
-for i in range(4):
-    models[i].fit(X_train, Y_train)
-
-    print(f'{models[i]} : ')
-
-    train_preds = models[i].predict(X_train)
-    print('Training Error : ', mae(Y_train, train_preds))
-
-    val_preds = models[i].predict(X_val)
-    print('Validation Error : ', mae(Y_val, val_preds))
-    print()
+if __name__ == "__main__":
+    print(analyze_demand)

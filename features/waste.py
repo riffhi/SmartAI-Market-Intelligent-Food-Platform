@@ -79,9 +79,10 @@ def generate_recommendations(input_data):
 
     # Create recommendations dataframe
     recommendations = pd.DataFrame({
-        'PredictedWaste': waste_pred,
-        'RecommendedPortionSize': portion_pred
+        'PredictedWaste (kg)': waste_pred,
+        'RecommendedPortionSize (kg)': portion_pred
     })
+    
 
     return recommendations
 
@@ -91,30 +92,30 @@ recommendations = generate_recommendations(example_data)
 print(recommendations.head())
 
 
-# Function to generate random test data
-def generate_random_test_data(num_rows=10):
-    days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-    times = ['Morning', 'Afternoon', 'Evening', 'Night']
-    weathers = ['Sunny', 'Rainy', 'Cloudy', 'Snowy']
+# # Function to generate random test data
+# def generate_random_test_data(num_rows=10):
+#     days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+#     times = ['Morning', 'Afternoon', 'Evening', 'Night']
+#     weathers = ['Sunny', 'Rainy', 'Cloudy', 'Snowy']
     
-    random_data = {
-        'DayOfWeek': [random.choice(days) for _ in range(num_rows)],
-        'TimeOfDay': [random.choice(times) for _ in range(num_rows)],
-        'Weather': [random.choice(weathers) for _ in range(num_rows)],
-        'PastSales': [random.randint(50, 500) for _ in range(num_rows)],
-        'CurrentStock': [random.randint(10, 50) for _ in range(num_rows)],
-        'DiscountOffered': [random.randint(0, 50) for _ in range(num_rows)],
-        'CustomerCount': [random.randint(20, 100) for _ in range(num_rows)],
-        'customer_behavior': [random.uniform(0.4, 0.6) for _ in range(num_rows)],
-        'portion_size': [random.uniform(200, 350) for _ in range(num_rows)],
-    }
+#     random_data = {
+#         'DayOfWeek': [random.choice(days) for _ in range(num_rows)],
+#         'TimeOfDay': [random.choice(times) for _ in range(num_rows)],
+#         'Weather': [random.choice(weathers) for _ in range(num_rows)],
+#         'PastSales': [random.randint(50, 500) for _ in range(num_rows)],
+#         'CurrentStock': [random.randint(10, 50) for _ in range(num_rows)],
+#         'DiscountOffered': [random.randint(0, 50) for _ in range(num_rows)],
+#         'CustomerCount': [random.randint(20, 100) for _ in range(num_rows)],
+#         'customer_behavior': [random.uniform(0.4, 0.6) for _ in range(num_rows)],
+#         'portion_size': [random.uniform(200, 350) for _ in range(num_rows)],
+#     }
     
-    return pd.DataFrame(random_data)
+#     return pd.DataFrame(random_data)
 
-# Generate random test data
-random_test_data = generate_random_test_data(num_rows=10)
+# # Generate random test data
+# random_test_data = generate_random_test_data(num_rows=10)
 
-# Generate recommendations using the random test data
-recommendations = generate_recommendations(random_test_data)
-print(random_test_data)
-print(recommendations)
+# # Generate recommendations using the random test data
+# recommendations = generate_recommendations(random_test_data)
+# print(random_test_data)
+# print(recommendations)

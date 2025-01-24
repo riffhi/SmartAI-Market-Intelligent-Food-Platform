@@ -46,3 +46,4 @@ df['Adjusted_Price'] = df.apply(adjust_prices, axis=1)
 df.to_csv("adjusted_small_product_prices.csv", index=False)
 
 print("Adjusted prices saved to 'adjusted_small_product_prices.csv'.")
+print(adjust_prices)
