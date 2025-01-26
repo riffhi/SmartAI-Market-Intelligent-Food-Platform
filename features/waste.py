@@ -79,8 +79,8 @@ def generate_recommendations(input_data):
 
     # Create recommendations dataframe
     recommendations = pd.DataFrame({
-        'PredictedWaste (kg)': waste_pred,
-        'RecommendedPortionSize (kg)': portion_pred
+        'PredictedWaste (pieces)': waste_pred,
+        'RecommendedPortionSize (pieces)': portion_pred
     })
     
 
