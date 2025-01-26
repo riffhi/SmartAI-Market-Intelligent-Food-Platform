@@ -35,10 +35,16 @@ def apply_custom_styles():
         background-color: #FDF6E3;
         font-family: 'Comic Sans MS', cursive, sans-serif;
     }
+<<<<<<< HEAD
    .stApp {
         max-width: 100%;  # Change from 85% to 100%
         margin: 0;  # Remove margin
         display: flex;  # Use flexbox layout
+=======
+    .stApp {
+        max-width: 85%;
+        margin: 0 auto;
+>>>>>>> 77f275a6b523206717c83345938a08052e335218
         background-color: #FFFAF0;
         border-radius: 15px;
         box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
@@ -55,54 +61,80 @@ def apply_custom_styles():
         transition: all 0.3s ease;
     }
     .stButton>button:hover {
+<<<<<<< HEAD
         background-color:rgb(182, 67, 67);
+=======
+        background-color: #FF4040;
+>>>>>>> 77f275a6b523206717c83345938a08052e335218
     }
     .stSidebar {
         background-color: #FFDAC1;
         border-radius: 10px;
+<<<<<<< HEAD
         padding:0px;
     }
     .stSidebar .stRadio {
         background-color: #FFF7E6;
        padding:10px;
+=======
+        padding: 10px;
+    }
+    .stSidebar .stRadio {
+        background-color: #FFF7E6;
+        padding: 10px;
+>>>>>>> 77f275a6b523206717c83345938a08052e335218
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     h1, h2, h3 {
         color: #FF4500;
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 77f275a6b523206717c83345938a08052e335218
     """, unsafe_allow_html=True)
 
 def main():
     apply_custom_styles()
-    
-    
-    st.title("🍽️ SmartAI Market: Intelligent Food Platform")
+
+    st.title("🎉 SmartAI Market: Your Playful Food Platform")
     st.markdown("""
-    ### Your AI-Powered Food Service Optimization Platform
-    Leveraging advanced machine learning to enhance food delivery, waste reduction, and pricing strategies.
+    ### 🌟 Welcome to Your AI-Powered Food Service Optimization Platform
+    Let's make food delivery fun, efficient, and sustainable with the power of AI! Explore features below. 🍕🚀
     """)
-    
+
     # Initialize AI platform
     food_ai = FoodPlatformAI()
-    
-    # Enhanced sidebar with card-like design
-    st.sidebar.title("🤖 AI Features")
-    st.sidebar.markdown("Select an intelligent feature to explore:")
 
+<<<<<<< HEAD
      # Feature selection sidebar
     feature = st.sidebar.radio("Select AI Feature", [
         "🌍 Route Optimization & Delivery Time Prediction",
         "🤝 Vendor Matching", 
+=======
+    # Sidebar
+    st.sidebar.title("🎯 AI Features")
+    st.sidebar.markdown("Select a feature to play with:")
+
+    feature = st.sidebar.radio("Pick a Feature:", [
+        "🌍 Route Optimization",
+        "🤝 Vendor Matching",
+>>>>>>> 77f275a6b523206717c83345938a08052e335218
         "💬 Sentiment Analysis",
         "♻️ Waste Reduction",
         "📈 Demand Forecasting",
         "💰 Price Optimization"
     ])
+<<<<<<< HEAD
     
     # Render selected feature's page
     if feature == "🌍 Route Optimization & Delivery Time Prediction":
+=======
+
+    # Route to the corresponding feature page
+    if feature == "🌍 Route Optimization":
+>>>>>>> 77f275a6b523206717c83345938a08052e335218
         route_optimization_page(food_ai)
     elif feature == "🤝 Vendor Matching":
         vendor_matching_page(food_ai.vendors_df, food_ai.customers_df)

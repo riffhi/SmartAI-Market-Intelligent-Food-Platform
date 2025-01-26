@@ -43,21 +43,6 @@ vaders = pd.DataFrame(res).T
 vaders = vaders.reset_index().rename(columns={'index': 'Row_Index'})
 vaders = vaders.merge(df, how='left', left_on='Row_Index', right_index=True)
 
-# Plot VADER results
-# ax = sns.barplot(data=vaders, x='Sentiment', y='compound')
-# ax.set_title('Compound Score by Sentiment')
-# plt.show()
-
-# fig, axs = plt.subplots(1, 3, figsize=(12, 3))
-# sns.barplot(data=vaders, x='Sentiment', y='pos', ax=axs[0])
-# sns.barplot(data=vaders, x='Sentiment', y='neu', ax=axs[1])
-# sns.barplot(data=vaders, x='Sentiment', y='neg', ax=axs[2])
-# axs[0].set_title('Positive')
-# axs[1].set_title('Neutral')
-# axs[2].set_title('Negative')
-# plt.tight_layout()
-# plt.show()
-
 # Load Hugging Face model using TensorFlow
 MODEL = "cardiffnlp/twitter-roberta-base-sentiment"
 tokenizer = AutoTokenizer.from_pretrained(MODEL)
@@ -106,10 +91,3 @@ negative_5_star_review = results_df.query('Sentiment == 0') \
 
 print("Positive Review Example: ", positive_1_star_review)
 print("Negative Review Example: ", negative_5_star_review)
-
-# # Use Hugging Face pipeline for quick sentiment analysis
-# from transformers import pipeline
-# sent_pipeline = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
-
-# print(sent_pipeline('I love sentiment analysis!'))
-# print(sent_pipeline('Make sure to like and subscribe!'))
