@@ -265,7 +265,7 @@ def price_optimization_page(food_ai):
 
 def get_location_suggestions(query):
     """Fetch location suggestions using Google Places API with enhanced error handling"""
-    API_KEY = 'AIzaSyBKdn9ak2NzS0xEA7nJMpTjmqEPI4JJzZI'
+    API_KEY = ''
     
     # Disable SSL warnings if needed
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -332,7 +332,7 @@ def route_optimization_page(food_ai=None):
     st.header("🚚 Route Optimization & Delivery Time Prediction")
     
     # Fixed API Key
-    API_KEY = 'AIzaSyBKdn9ak2NzS0xEA7nJMpTjmqEPI4JJzZI'
+    API_KEY = ''
     
     try:
         # Initialize Google Maps Client

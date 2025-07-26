@@ -145,5 +145,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 Riddhi Bhanushali - bhanushaliriddhi2205@gmail.com
+Aryan Ghate - aryanghate29@gmail.com
+Bhavesh Pingale - bhavesh.pingale23@gmail.com
+Shubham Ghare - shubhamghare0701@gmail.com
 
-Project Link: [https://github.com/riffhi/rubix-25_36_kaizen](https://github.com/riffhi/rubix-25_36_kaizen)
+Project Link: [[https://github.com/riffhi/rubix-25_36_kaizen](https://github.com/riffhi/rubix-25_36_kaizen)](https://github.com/riffhi/SmartAI-Market-Intelligent-Food-Platform)
