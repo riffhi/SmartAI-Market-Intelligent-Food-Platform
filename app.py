@@ -104,18 +104,13 @@ def main():
     if feature == "🌍 Route Optimization & Delivery Time Prediction":
         route_optimization_page(food_ai)
     elif feature == "🤝 Vendor Matching":
-    elif feature == "🤝 Vendor Matching":
         vendor_matching_page(food_ai.vendors_df, food_ai.customers_df)
-    elif feature == "💬 Sentiment Analysis":
     elif feature == "💬 Sentiment Analysis":
         sentiment_analysis_page(food_ai)
     elif feature == "♻️ Waste Reduction":
-    elif feature == "♻️ Waste Reduction":
         waste_reduction_page(food_ai)
     elif feature == "📈 Demand Forecasting":
-    elif feature == "📈 Demand Forecasting":
         demand_forecasting_page(food_ai)
-    elif feature == "💰 Price Optimization":
     elif feature == "💰 Price Optimization":
         price_optimization_page(food_ai)
 
